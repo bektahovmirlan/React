@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="updateTime()">
     <p id="date"></p>
     <p id="hours"></p>
 
@@ -17,8 +17,14 @@
     let day = days[d.getDay()];
     document.getElementById("date").innerHTML = "Today is: " + day;
 
-    const h = new Date();
-    document.getElementById("hours").innerHTML = "Current time is: " + h.getHours() + ":" + h.getMinutes() + ":" + h.getSeconds();
+    const updateTime = () => {
+        const t = new Date();
+        let h = t.getHours();
+        let m = t.getMinutes();
+        let s = t.getSeconds();
+        document.getElementById("hours").innerHTML = "Current time is: " + h + ":" + m + ":" + s;
+        setTimeout(updateTime, 1000);
+    }
     </script>
 </body>
 </html>
