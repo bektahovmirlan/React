@@ -7,10 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <ul>
-            <li>1</li>
-        </ul>
-    </div>
+    <script>
+        function reverseStr(str){
+
+            var splStr = str.split(" ");
+
+            for (var i = 0; i < splStr.length; i++) {
+                if (splStr[i].length >= 5) {
+                    splStr[i]= splStr[i].split("").reverse().join("");
+                }
+
+            } 
+
+            var joinStr = splStr.join(" ");
+
+            return joinStr;
+
+            } 
+
+            console.log(reverseStr("Hey fellow students"));
+    </script>
 </body>
 </html>
