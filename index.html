@@ -7,10 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <ul>
-            <li>1</li>
-        </ul>
-    </div>
+        <ol id="todo-list">
+
+        </ol>
+
+
+        <script>
+            let tasks = ['Buy lemonade', 'Make toasts',
+                         'Repair car', 'Play games', 'Pet a cat'];
+
+            let mainList = document.getElementById("todo-list");
+
+            for(let i=0; i<tasks.length; i++){
+                let item = tasks[i];
+                let li = document.createElement("li");
+                li.innerHTML = item;
+
+                mainList.append(li);
+            }
+        </script>
 </body>
 </html>
