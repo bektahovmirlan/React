@@ -7,13 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-       <p id="date">
-            Today is :
-       </p>
-    </div>
+    <p id="date"></p>
+    <p id="hours"></p>
+
     <script>
-        document.getElementById('date').innerHTML = Date();
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    
+    const d = new Date();
+    let day = days[d.getDay()];
+    document.getElementById("date").innerHTML = "Today is: " + day;
+
+    const h = new Date();
+    document.getElementById("hours").innerHTML = "Current time is: " + h.getHours() + ":" + h.getMinutes() + ":" + h.getSeconds();
     </script>
 </body>
 </html>
