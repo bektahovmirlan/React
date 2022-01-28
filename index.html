@@ -7,10 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <ul>
-            <li>1</li>
-        </ul>
-    </div>
+
+<script>
+const myFunc = (n) => {
+    let digs=[];
+        let m=n.toString();
+    for (let i=0;i<m.length;i++) {
+        digs.push(parseInt(m[i]));
+    }
+    return parseInt(digs.sort().reverse().join(''));
+}
+console.log(myFunc(4979854));
+</script>
 </body>
 </html>
